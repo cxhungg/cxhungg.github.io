@@ -29,7 +29,7 @@
                 <div class="project-description">
                     <p>I learnt C++ through making this simple physics engine! It can simulate projectile motion, collisions, springs, joints, and planets in orbit.</p>
                     <p>I loved working on this project and will continue to improve on it. Maybe adding more features like fluids, soft bodies, and electricity and magnetism!</p>
-                    <!-- <a href="#" class="explore-link">EXPLORE WEB VERSION →</a> -->
+                    
 
 
 
@@ -162,13 +162,13 @@
 
         <div class="project-item">
             <div class="project-media">
-                <!-- Add your image or gif here -->
+                
                 
                 <canvas id="marketCanvas" width="400" height="300"></canvas>
                 <!-- <img src="model.jpg" alt="Project Two Visualization"> -->
             </div>
             <div class="project-content">
-                <!-- <div class="project-number">1.2</div> -->
+                
                 <h2 style="font-size: 1.8rem;">Mathematical Model of Market Dynamics</h2>
                 <div class="project-description">
                     <p>Cryptocurrency markets have grown rapidly in size, complexity, and influence, and their interaction with traditional financial markets is 
@@ -301,12 +301,12 @@
 
         <div class="project-item">
             <div class="project-media">
-                <!-- Add your image or gif here -->
+                
                 
                 <canvas id="networkCanvas" width="400" height="300"></canvas>
             </div>
             <div class="project-content">
-                <!-- <div class="project-number">1.2</div> -->
+                
                 <h2 style="font-size: 1.8rem;">Network Anomaly Detection</h2>
                 <div class="project-description">
                     <p>Reducing dimensions and reconstructing them to find anomalies in network traffic? Yes please!</p>
@@ -655,11 +655,11 @@
         const dataPoints = [];
         const numPoints = 50;
 
-        // Generate larger 3D data points
+        
         for(let i = 0; i < numPoints; i++) {
-            const x = Math.random() * 150 - 75;  // Increased range
-            const y = x * 0.7 + (Math.random() * 45 - 22.5);  // Increased range
-            const z = x * 0.3 + y * 0.5 + (Math.random() * 30 - 15);  // Increased range
+            const x = Math.random() * 150 - 75;  
+            const y = x * 0.7 + (Math.random() * 45 - 22.5);  
+            const z = x * 0.3 + y * 0.5 + (Math.random() * 30 - 15);  
             dataPoints.push({x, y, z});
         }
 
@@ -685,7 +685,7 @@
             };
 
             // Project to 2D with perspective
-            const scale = 1500 / (1500 + rotXY.z);  // Changed from 1000 to 1500
+            const scale = 1500 / (1500 + rotXY.z);  
             return {
                 x: rotXY.x * scale,
                 y: rotXY.y * scale,
@@ -713,7 +713,7 @@
             })).sort((a, b) => b.projected.z - a.projected.z);
 
             // Draw axes
-            const axisLength = 150;  // Changed from 100 to 150
+            const axisLength = 150; 
             const axes = [
                 {x: axisLength, y: 0, z: 0},  // X axis
                 {x: 0, y: axisLength, z: 0},  // Y axis
@@ -735,7 +735,7 @@
             networkCtx.lineTo(projectedAxes[2].x, projectedAxes[2].y);
             networkCtx.stroke();
 
-            // Draw points with size based on z-depth
+            
             projectedPoints.forEach(({projected}) => {
                 const size = Math.max(1, 5 * (1000 + projected.z) / 2000);
                 const alpha = (1000 + projected.z) / 2000;
