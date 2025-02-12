@@ -1,0 +1,277 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.6;
+    color: #ffffff;
+    background-color: #1a1a1a;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: rgba(26, 26, 26, 0.98);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 1px 15px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    padding: 1.5rem 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 4rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #64ffda;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #64ffda;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.split-container {
+    display: flex;
+    min-height: 100vh;
+    padding-top: 80px;
+    background-color: #1a1a1a;
+}
+
+.left-side, .right-side {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.typing-container {
+    max-width: 600px;
+}
+
+.typing-text {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #ffffff;
+    border-right: 3px solid;
+    width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: 
+        typing 0.9s steps(12) forwards,  /* typing speed */
+
+        blink .8s infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink {
+    0% { border-color: transparent }
+    50% { border-color: #64ffda }
+    100% { border-color: transparent }
+}
+
+.bio-content {
+    max-width: 500px;
+    opacity: 0;
+    animation: fadeIn 0.7s ease-out 1.2s forwards;
+}
+
+.bio-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #a8b2d1;
+    margin-bottom: 2rem;
+}
+
+.bio-content a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* .resume-btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: transparent;
+    color: #64ffda;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 2px solid #64ffda;
+}
+
+.resume-btn:hover {
+    background-color: rgba(100, 255, 218, 0.1);
+    transform: translateY(-2px);
+} */
+
+/* From Uiverse.io by gagan-gv */ 
+.btn {
+    display: block;
+    padding: 0.7em 1em;
+    background: transparent;
+    outline: none;
+    border: 0;
+    color: #d4af37;
+    letter-spacing: 0.1em;
+    font-family: monospace;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1;
+}
+  
+.cube {
+    position: relative;
+    transition: all 0.5s;
+}
+  
+.cube .bg-top {
+    position: absolute;
+    height: 10px;
+    background: #d4af37;
+    bottom: 100%;
+    left: 5px;
+    right: -5px;
+    transform: skew(-45deg, 0);
+    margin: 0;
+    transition: all 0.4s;
+}
+  
+.cube .bg-top .bg-inner {
+    bottom: 0;}
+  
+.cube .bg {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    background: #d4af37;
+    transition: all 0.4s;
+}
+  
+.cube .bg-right {
+    position: absolute;
+    background: #d4af37;
+    top: -5px;
+    z-index: 0;
+    bottom: 5px;
+    width: 10px;
+    left: 100%;
+    transform: skew(0, -45deg);
+    transition: all 0.4s;
+}
+  
+.cube .bg-right .bg-inner {
+    left: 0;
+}
+  
+.cube .bg-inner {
+    background: #28282d;
+    position: absolute;
+    left: 2px;
+    right: 2px;
+    top: 2px;
+    bottom: 2px;
+}
+  
+.cube .text {
+    position: relative;
+    transition: all 0.4s;
+}
+  
+.cube:hover .bg-inner {
+    background: #d4af37;
+    transition: all 0.4s;
+}
+  
+.cube:hover .text {
+    color: #28282d;
+    transition: all 0.4s;
+}
+  
+.cube:hover .bg-right,
+.cube:hover .bg,
+.cube:hover .bg-top {
+    background: #28282d;
+}
+  
+.cube:active {
+    z-index: 9999;
+    animation: bounce 0.1s linear;
+}
+  
+@keyframes bounce {
+    50% {
+      transform: scale(0.9);
+    }
+}
+  
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .split-container {
+        flex-direction: column;
+    }
+
+    .typing-text {
+        font-size: 2.5rem;
+    }
+
+    nav ul {
+        gap: 2rem;
+    }
+
+    .bio-content {
+        padding: 1rem;
+    }
+
+    .left-side, .right-side {
+        padding: 3rem 1.5rem;
+    }
+}
