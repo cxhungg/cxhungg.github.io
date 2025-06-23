@@ -4,8 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hung's Projects</title>
-    <link rel="stylesheet" href="project_styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: #f4f6fa;
+            color: #23272f;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #fff;
+            box-shadow: 0 1px 8px rgba(0,0,0,0.04);
+            padding: 1.5rem 0 1.5rem 0;
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 4rem;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #23272f;
+            font-weight: 500;
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            transition: color 0.2s;
+        }
+        nav ul li a:hover {
+            color: #2563eb;
+        }
+        main {
+            max-width: 700px;
+            margin: 80px auto 0 auto;
+            padding: 2rem 1.5rem 3rem 1.5rem;
+        }
+        h1 {
+            font-size: 2.7rem;
+            font-weight: 800;
+            margin-bottom: 1.2rem;
+            color: #23272f;
+        }
+        .intro {
+            font-size: 1.25rem;
+            margin-bottom: 2.2rem;
+            color: #23272f;
+        }
+        ul.project-list {
+            margin: 0 0 2.5rem 0;
+            padding-left: 1.2em;
+        }
+        ul.project-list li {
+            font-size: 1.15rem;
+            margin: 1.1em 0;
+            color: #23272f;
+        }
+        ul.project-list a {
+            color: #2563eb;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        ul.project-list a:hover {
+            color: #1d4ed8;
+            text-decoration: underline;
+        }
+        .github-link {
+            font-size: 1.1rem;
+            color: #23272f;
+            margin-top: 2.5rem;
+        }
+        .github-link a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        .github-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -17,742 +96,19 @@
             </ul>
         </nav>
     </header>
-
-    <main class="projects-container">
-        <div class="project-item">
-            <div class="project-media">
-                <canvas id="ropeCanvas" width="400" height="300"></canvas>
-            </div>
-            <div class="project-content">
-                <!-- <div class="project-number">1.1</div> -->
-                <h2 style="font-size: 1.8rem;">Physics Engine</h2>
-                <div class="project-description">
-                    <p>I learnt C++ through making this simple physics engine! It can simulate projectile motion, collisions, springs, joints, and planets in orbit.</p>
-                    <p>I loved working on this project and will continue to improve on it. Maybe adding more features like fluids, soft bodies, and electricity and magnetism!</p>
-                    
-
-
-
-                    <!-- From Uiverse.io by MuhammadHasann --> 
-                    <button class="explore_btn" type="button">
-                      <a href="https://github.com/cxhungg/Physics-Engine">
-    Explore
-    <div class="star-1">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        xml:space="preserve"
-        version="1.1"
-        style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
-        viewBox="0 0 784.11 815.53"
-        xmlns:xlink="http://www.w3.org/1999/xlink"
-      >
-        <defs></defs>
-        <g id="Layer_x0020_1">
-          <metadata id="CorelCorpID_0Corel-Layer"></metadata>
-          <path
-            class="fil0"
-            d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
-          ></path>
-        </g>
-      </svg>
-    </div>
-    <div class="star-2">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        xml:space="preserve"
-        version="1.1"
-        style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
-        viewBox="0 0 784.11 815.53"
-        xmlns:xlink="http://www.w3.org/1999/xlink"
-      >
-        <defs></defs>
-        <g id="Layer_x0020_1">
-          <metadata id="CorelCorpID_0Corel-Layer"></metadata>
-          <path
-            class="fil0"
-            d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
-          ></path>
-        </g>
-      </svg>
-    </div>
-    <div class="star-3">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        xml:space="preserve"
-        version="1.1"
-        style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
-        viewBox="0 0 784.11 815.53"
-        xmlns:xlink="http://www.w3.org/1999/xlink"
-      >
-        <defs></defs>
-        <g id="Layer_x0020_1">
-          <metadata id="CorelCorpID_0Corel-Layer"></metadata>
-          <path
-            class="fil0"
-            d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
-          ></path>
-        </g>
-      </svg>
-    </div>
-    <div class="star-4">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        xml:space="preserve"
-        version="1.1"
-        style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
-        viewBox="0 0 784.11 815.53"
-        xmlns:xlink="http://www.w3.org/1999/xlink"
-      >
-        <defs></defs>
-        <g id="Layer_x0020_1">
-          <metadata id="CorelCorpID_0Corel-Layer"></metadata>
-          <path
-            class="fil0"
-            d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
-          ></path>
-        </g>
-      </svg>
-    </div>
-    <div class="star-5">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        xml:space="preserve"
-        version="1.1"
-        style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
-        viewBox="0 0 784.11 815.53"
-        xmlns:xlink="http://www.w3.org/1999/xlink"
-      >
-        <defs></defs>
-        <g id="Layer_x0020_1">
-          <metadata id="CorelCorpID_0Corel-Layer"></metadata>
-          <path
-            class="fil0"
-            d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
-          ></path>
-        </g>
-      </svg>
-    </div>
-    <div class="star-6">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        xml:space="preserve"
-        version="1.1"
-        style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
-        viewBox="0 0 784.11 815.53"
-        xmlns:xlink="http://www.w3.org/1999/xlink"
-      >
-        <defs></defs>
-        <g id="Layer_x0020_1">
-          <metadata id="CorelCorpID_0Corel-Layer"></metadata>
-          <path
-            class="fil0"
-            d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
-          ></path>
-        </g>
-      </svg>
-    </div>
-  </a>
-                    </button>
-  
-
-
-                </div>
-            </div>
+    <main>
+        <h1>Projects</h1>
+        <div class="intro">
+            These are projects I have worked on.
         </div>
-
-        <div class="project-item">
-            <div class="project-media">
-                
-                
-                <canvas id="marketCanvas" width="400" height="300"></canvas>
-                <!-- <img src="model.jpg" alt="Project Two Visualization"> -->
-            </div>
-            <div class="project-content">
-                
-                <h2 style="font-size: 1.8rem;">Mathematical Model of Market Dynamics</h2>
-                <div class="project-description">
-                    <p>Cryptocurrency markets have grown rapidly in size, complexity, and influence, and their interaction with traditional financial markets is 
-                      becoming increasingly important.</p>
-
-                    <p>In this project, I modeled the interactions between the two markets, first using a Markov Chain and then a modified Lotka-Volterra model, comparing the results of both approaches.</p>
-                    <p>Read the paper here ↓</p>
-                    <button class="explore_btn" type="button">
-                      <a href="Modelling_Project_Report.pdf">
-                        Explore
-                      </a>
-                        <div class="star-1">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            xml:space="preserve"
-                            version="1.1"
-                            style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
-                            viewBox="0 0 784.11 815.53"
-                            xmlns:xlink="http://www.w3.org/1999/xlink"
-                          >
-                            <defs></defs>
-                            <g id="Layer_x0020_1">
-                              <metadata id="CorelCorpID_0Corel-Layer"></metadata>
-                              <path
-                                class="fil0"
-                                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
-                              ></path>
-                            </g>
-                          </svg>
-                        </div>
-                        <div class="star-2">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            xml:space="preserve"
-                            version="1.1"
-                            style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
-                            viewBox="0 0 784.11 815.53"
-                            xmlns:xlink="http://www.w3.org/1999/xlink"
-                          >
-                            <defs></defs>
-                            <g id="Layer_x0020_1">
-                              <metadata id="CorelCorpID_0Corel-Layer"></metadata>
-                              <path
-                                class="fil0"
-                                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
-                              ></path>
-                            </g>
-                          </svg>
-                        </div>
-                        <div class="star-3">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            xml:space="preserve"
-                            version="1.1"
-                            style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
-                            viewBox="0 0 784.11 815.53"
-                            xmlns:xlink="http://www.w3.org/1999/xlink"
-                          >
-                            <defs></defs>
-                            <g id="Layer_x0020_1">
-                              <metadata id="CorelCorpID_0Corel-Layer"></metadata>
-                              <path
-                                class="fil0"
-                                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
-                              ></path>
-                            </g>
-                          </svg>
-                        </div>
-                        <div class="star-4">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            xml:space="preserve"
-                            version="1.1"
-                            style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
-                            viewBox="0 0 784.11 815.53"
-                            xmlns:xlink="http://www.w3.org/1999/xlink"
-                          >
-                            <defs></defs>
-                            <g id="Layer_x0020_1">
-                              <metadata id="CorelCorpID_0Corel-Layer"></metadata>
-                              <path
-                                class="fil0"
-                                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
-                              ></path>
-                            </g>
-                          </svg>
-                        </div>
-                        <div class="star-5">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            xml:space="preserve"
-                            version="1.1"
-                            style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
-                            viewBox="0 0 784.11 815.53"
-                            xmlns:xlink="http://www.w3.org/1999/xlink"
-                          >
-                            <defs></defs>
-                            <g id="Layer_x0020_1">
-                              <metadata id="CorelCorpID_0Corel-Layer"></metadata>
-                              <path
-                                class="fil0"
-                                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
-                              ></path>
-                            </g>
-                          </svg>
-                        </div>
-                        <div class="star-6">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            xml:space="preserve"
-                            version="1.1"
-                            style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
-                            viewBox="0 0 784.11 815.53"
-                            xmlns:xlink="http://www.w3.org/1999/xlink"
-                          >
-                            <defs></defs>
-                            <g id="Layer_x0020_1">
-                              <metadata id="CorelCorpID_0Corel-Layer"></metadata>
-                              <path
-                                class="fil0"
-                                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
-                              ></path>
-                            </g>
-                          </svg>
-                        </div>
-                                        </button>
-                </div>
-            </div>
+        <ul class="project-list">
+            <li><a href="physics-engine.html">Physics Engine</a></li>
+            <li><a href="market-model.html">Mathematical Model of Market Dynamics</a></li>
+            <li><a href="network-anomaly.html">Network Anomaly Detection</a></li>
+        </ul>
+        <div class="github-link">
+            You can also find smaller projects and experiments at my <a href="https://github.com/cxhungg" target="_blank">GitHub page</a>.
         </div>
-
-        <div class="project-item">
-            <div class="project-media">
-                
-                
-                <canvas id="networkCanvas" width="400" height="300"></canvas>
-            </div>
-            <div class="project-content">
-                
-                <h2 style="font-size: 1.8rem;">Network Anomaly Detection</h2>
-                <div class="project-description">
-                    <p>Reducing dimensions and reconstructing them to find anomalies in network traffic? Yes please!</p>
-
-                    <p> In this project, I used a combination of PCA and autoencoders to reduce the dimensionality of captured network traffic data and reconstruct it. Then I used the reconstructed data to detect anomalies in the network traffic.</p>
-                    
-                    <button class="explore_btn" type="button">
-                      <a href="Modelling_Project_Report.pdf">
-                        Explore
-                      </a>
-                        <div class="star-1">
-
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            xml:space="preserve"
-                            version="1.1"
-                            style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
-                            viewBox="0 0 784.11 815.53"
-                            xmlns:xlink="http://www.w3.org/1999/xlink"
-                          >
-                            <defs></defs>
-                            <g id="Layer_x0020_1">
-                              <metadata id="CorelCorpID_0Corel-Layer"></metadata>
-                              <path
-                                class="fil0"
-                                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
-                              ></path>
-                            </g>
-                          </svg>
-                        </div>
-                        <div class="star-2">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            xml:space="preserve"
-                            version="1.1"
-                            style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
-                            viewBox="0 0 784.11 815.53"
-                            xmlns:xlink="http://www.w3.org/1999/xlink"
-                          >
-                            <defs></defs>
-                            <g id="Layer_x0020_1">
-                              <metadata id="CorelCorpID_0Corel-Layer"></metadata>
-                              <path
-                                class="fil0"
-                                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
-                              ></path>
-                            </g>
-                          </svg>
-                        </div>
-                        <div class="star-3">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            xml:space="preserve"
-                            version="1.1"
-                            style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
-                            viewBox="0 0 784.11 815.53"
-                            xmlns:xlink="http://www.w3.org/1999/xlink"
-                          >
-                            <defs></defs>
-                            <g id="Layer_x0020_1">
-                              <metadata id="CorelCorpID_0Corel-Layer"></metadata>
-                              <path
-                                class="fil0"
-                                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
-                              ></path>
-                            </g>
-                          </svg>
-                        </div>
-                        <div class="star-4">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            xml:space="preserve"
-                            version="1.1"
-                            style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
-                            viewBox="0 0 784.11 815.53"
-                            xmlns:xlink="http://www.w3.org/1999/xlink"
-                          >
-                            <defs></defs>
-                            <g id="Layer_x0020_1">
-                              <metadata id="CorelCorpID_0Corel-Layer"></metadata>
-                              <path
-                                class="fil0"
-                                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
-                              ></path>
-                            </g>
-                          </svg>
-                        </div>
-                        <div class="star-5">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            xml:space="preserve"
-                            version="1.1"
-                            style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
-                            viewBox="0 0 784.11 815.53"
-                            xmlns:xlink="http://www.w3.org/1999/xlink"
-                          >
-                            <defs></defs>
-                            <g id="Layer_x0020_1">
-                              <metadata id="CorelCorpID_0Corel-Layer"></metadata>
-                              <path
-                                class="fil0"
-                                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
-                              ></path>
-                            </g>
-                          </svg>
-                        </div>
-                        <div class="star-6">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            xml:space="preserve"
-                            version="1.1"
-                            style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
-                            viewBox="0 0 784.11 815.53"
-                            xmlns:xlink="http://www.w3.org/1999/xlink"
-                          >
-                            <defs></defs>
-                            <g id="Layer_x0020_1">
-                              <metadata id="CorelCorpID_0Corel-Layer"></metadata>
-                              <path
-                                class="fil0"
-                                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
-                              ></path>
-                            </g>
-                          </svg>
-                        </div>
-                                        </button>
-                </div>
-            </div>
-        </div>
-
-        
-
     </main>
-
-    <div style="text-align: center; margin-top: -8rem;">
-        <button class="button">
-            <svg class="svgIcon" viewBox="0 0 384 512">
-                <path
-                    d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"
-                ></path>
-            </svg>
-        </button>
-    </div>
-
-    <script>
-        // Scroll to top button functionality
-        const scrollButton = document.querySelector('.button');
-        
-        scrollButton.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-    </script>
-
-    <script>
-        const ropeCanvas = document.getElementById('ropeCanvas');
-        const ropeCtx = ropeCanvas.getContext('2d');
-        
-        class Point {
-            constructor(x, y) {
-                this.x = x;
-                this.y = y;
-                this.oldx = x;
-                this.oldy = y;
-                this.pinned = false;
-            }
-        }
-
-        class Rope {
-            constructor(startX, startY, segments) {
-                this.points = [];
-                this.segments = segments;
-                this.gravity = 0.5;
-                this.friction = 0.99;
-
-                // Create rope points
-                for (let i = 0; i < segments; i++) {
-                    this.points.push(new Point(startX, startY + i * 10));
-                }
-                
-                // Pin the first point
-                this.points[0].pinned = true;
-            }
-
-            update() {
-                // Update points
-                for (let i = 0; i < this.points.length; i++) {
-                    let p = this.points[i];
-                    if (p.pinned) continue;
-
-                    let vx = (p.x - p.oldx) * this.friction;
-                    let vy = (p.y - p.oldy) * this.friction;
-
-                    p.oldx = p.x;
-                    p.oldy = p.y;
-
-                    p.x += vx;
-                    p.y += vy;
-                    p.y += this.gravity;
-                }
-
-                // Constrain points
-                for (let i = 0; i < 3; i++) {
-                    for (let j = 0; j < this.points.length - 1; j++) {
-                        let p1 = this.points[j];
-                        let p2 = this.points[j + 1];
-                        let dx = p2.x - p1.x;
-                        let dy = p2.y - p1.y;
-                        let dist = Math.sqrt(dx * dx + dy * dy);
-                        let diff = 10 - dist;
-                        let percent = diff / dist / 2;
-                        let offsetX = dx * percent;
-                        let offsetY = dy * percent;
-
-                        if (!p1.pinned) {
-                            p1.x -= offsetX;
-                            p1.y -= offsetY;
-                        }
-                        if (!p2.pinned) {
-                            p2.x += offsetX;
-                            p2.y += offsetY;
-                        }
-                    }
-                }
-            }
-
-            draw() {
-                ropeCtx.beginPath();
-                ropeCtx.strokeStyle = '#64ffda';
-                ropeCtx.lineWidth = 4;
-                ropeCtx.moveTo(this.points[0].x, this.points[0].y);
-                
-                for (let i = 1; i < this.points.length; i++) {
-                    ropeCtx.lineTo(this.points[i].x, this.points[i].y);
-                }
-                
-                ropeCtx.stroke();
-            }
-        }
-
-        const rope = new Rope(200, 50, 20);
-        let isDragging = false;
-        let dragPoint = null;
-
-        function animate() {
-            ropeCtx.clearRect(0, 0, ropeCanvas.width, ropeCanvas.height);
-            rope.update();
-            rope.draw();
-            requestAnimationFrame(animate);
-        }
-
-        // Mouse interaction
-        ropeCanvas.addEventListener('mousedown', (e) => {
-            const rect = ropeCanvas.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            
-            rope.points.forEach(p => {
-                if (Math.abs(p.x - x) < 20 && Math.abs(p.y - y) < 20) {
-                    isDragging = true;
-                    dragPoint = p;
-                }
-            });
-        });
-
-        ropeCanvas.addEventListener('mousemove', (e) => {
-            if (isDragging && dragPoint) {
-                const rect = ropeCanvas.getBoundingClientRect();
-                dragPoint.x = e.clientX - rect.left;
-                dragPoint.y = e.clientY - rect.top;
-            }
-        });
-
-        ropeCanvas.addEventListener('mouseup', () => {
-            isDragging = false;
-            dragPoint = null;
-        });
-
-        animate();
-    </script>
-
-    <script>
-        // Market dynamics visualization
-        const marketCanvas = document.getElementById('marketCanvas');
-        const marketCtx = marketCanvas.getContext('2d');
-
-        let time = 0;
-        function drawMarkets() {
-            // Clear canvas
-            marketCtx.clearRect(0, 0, marketCanvas.width, marketCanvas.height);
-            
-            // Set line styles
-            marketCtx.lineWidth = 2;
-            
-            // Draw traditional market line (blue)
-            marketCtx.beginPath();
-            marketCtx.strokeStyle = '#4A90E2';
-            for(let x = 0; x < marketCanvas.width; x++) {
-                let y = marketCanvas.height/2 + 
-                        Math.sin(x/50 + time/10) * 50 + 
-                        Math.sin(x/25) * 20;
-                if(x === 0) {
-                    marketCtx.moveTo(x, y);
-                } else {
-                    marketCtx.lineTo(x, y);
-                }
-            }
-            marketCtx.stroke();
-            
-            // Draw crypto market line (orange)
-            marketCtx.beginPath();
-            marketCtx.strokeStyle = '#F5A623';
-            for(let x = 0; x < marketCanvas.width; x++) {
-                let y = marketCanvas.height/2 + 
-                        Math.sin(x/40 + time/8) * 40 + 
-                        Math.cos(x/30) * 30;
-                if(x === 0) {
-                    marketCtx.moveTo(x, y);
-                } else {
-                    marketCtx.lineTo(x, y);
-                }
-            }
-            marketCtx.stroke();
-            
-            // Add legend
-            marketCtx.font = '12px Inter';
-            marketCtx.fillStyle = '#4A90E2';
-            marketCtx.fillText('Traditional Market', 10, 20);
-            marketCtx.fillStyle = '#F5A623';
-            marketCtx.fillText('Crypto Market', 10, 40);
-            
-            time += 0.1;
-            requestAnimationFrame(drawMarkets);
-        }
-
-        drawMarkets();
-    </script>
-
-    <script>
-        const networkCanvas = document.getElementById('networkCanvas');
-        const networkCtx = networkCanvas.getContext('2d');
-
-        let pcaTime = 0;
-        const dataPoints = [];
-        const numPoints = 50;
-
-        
-        for(let i = 0; i < numPoints; i++) {
-            const x = Math.random() * 150 - 75;  
-            const y = x * 0.7 + (Math.random() * 45 - 22.5);  
-            const z = x * 0.3 + y * 0.5 + (Math.random() * 30 - 15);  
-            dataPoints.push({x, y, z});
-        }
-
-        function project3DTo2D(point, rotation) {
-            // Apply 3D rotation
-            const cosX = Math.cos(rotation.x);
-            const sinX = Math.sin(rotation.x);
-            const cosY = Math.cos(rotation.y);
-            const sinY = Math.sin(rotation.y);
-
-            // Rotate around Y axis
-            const rotY = {
-                x: point.x * cosY - point.z * sinY,
-                y: point.y,
-                z: point.x * sinY + point.z * cosY
-            };
-
-            // Rotate around X axis
-            const rotXY = {
-                x: rotY.x,
-                y: rotY.y * cosX - rotY.z * sinX,
-                z: rotY.y * sinX + rotY.z * cosX
-            };
-
-            // Project to 2D with perspective
-            const scale = 1500 / (1500 + rotXY.z);  
-            return {
-                x: rotXY.x * scale,
-                y: rotXY.y * scale,
-                z: rotXY.z
-            };
-        }
-
-        function drawPCA() {
-            networkCtx.clearRect(0, 0, networkCanvas.width, networkCanvas.height);
-            
-            // Set up rotation angles
-            const rotation = {
-                x: Math.sin(pcaTime/100) * 0.5,
-                y: pcaTime/100
-            };
-
-            // Transform to center of canvas
-            networkCtx.save();
-            networkCtx.translate(networkCanvas.width/2, networkCanvas.height/2);
-
-            // Sort points by z-depth for proper rendering
-            const projectedPoints = dataPoints.map(p => ({
-                original: p,
-                projected: project3DTo2D(p, rotation)
-            })).sort((a, b) => b.projected.z - a.projected.z);
-
-            // Draw axes
-            const axisLength = 150; 
-            const axes = [
-                {x: axisLength, y: 0, z: 0},  // X axis
-                {x: 0, y: axisLength, z: 0},  // Y axis
-                {x: 0, y: 0, z: axisLength}   // Z axis
-            ];
-
-            const projectedAxes = axes.map(p => project3DTo2D(p, rotation));
-            
-            networkCtx.strokeStyle = '#666';
-            networkCtx.lineWidth = 1;
-            
-            // Draw axes
-            networkCtx.beginPath();
-            networkCtx.moveTo(0, 0);
-            networkCtx.lineTo(projectedAxes[0].x, projectedAxes[0].y);
-            networkCtx.moveTo(0, 0);
-            networkCtx.lineTo(projectedAxes[1].x, projectedAxes[1].y);
-            networkCtx.moveTo(0, 0);
-            networkCtx.lineTo(projectedAxes[2].x, projectedAxes[2].y);
-            networkCtx.stroke();
-
-            
-            projectedPoints.forEach(({projected}) => {
-                const size = Math.max(1, 5 * (1000 + projected.z) / 2000);
-                const alpha = (1000 + projected.z) / 2000;
-                
-                networkCtx.fillStyle = `rgba(100, 255, 218, ${alpha})`;
-                networkCtx.beginPath();
-                networkCtx.arc(projected.x, projected.y, size, 0, Math.PI * 2);
-                networkCtx.fill();
-            });
-
-            networkCtx.restore();
-            pcaTime++;
-            requestAnimationFrame(drawPCA);
-        }
-
-        drawPCA();
-    </script>
-
 </body>
 </html> 
