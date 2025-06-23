@@ -7,16 +7,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
-            background: #f4f6fa;
-            color: #23272f;
+            background-color: #1a1a1a;
+            color: #ffffff;
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
             margin: 0;
             padding: 0;
+            overflow-x: hidden;
         }
         header {
-            background: #fff;
-            box-shadow: 0 1px 8px rgba(0,0,0,0.04);
-            padding: 1.5rem 0 1.5rem 0;
+            background-color: rgba(26, 26, 26, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 1px 15px rgba(0, 0, 0, 0.2);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            padding: 1.5rem 0;
         }
         nav ul {
             display: flex;
@@ -28,31 +35,45 @@
         }
         nav ul li a {
             text-decoration: none;
-            color: #23272f;
+            color: #ffffff;
             font-weight: 500;
             font-size: 1rem;
             letter-spacing: 0.5px;
             text-transform: uppercase;
-            transition: color 0.2s;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #64ffda;
+            transition: width 0.3s ease;
         }
         nav ul li a:hover {
-            color: #2563eb;
+            color: #64ffda;
+        }
+        nav ul li a:hover::after {
+            width: 100%;
         }
         main {
             max-width: 700px;
-            margin: 80px auto 0 auto;
+            margin: 120px auto 0 auto;
             padding: 2rem 1.5rem 3rem 1.5rem;
         }
         h1 {
             font-size: 2.7rem;
             font-weight: 800;
             margin-bottom: 1.2rem;
-            color: #23272f;
+            color: #ffffff;
         }
         .intro {
             font-size: 1.25rem;
             margin-bottom: 2.2rem;
-            color: #23272f;
+            color: #a8b2d1;
         }
         ul.project-list {
             margin: 0 0 2.5rem 0;
@@ -61,28 +82,43 @@
         ul.project-list li {
             font-size: 1.15rem;
             margin: 1.1em 0;
-            color: #23272f;
+            color: #ffffff;
         }
         ul.project-list a {
-            color: #2563eb;
+            color: #64ffda;
             text-decoration: none;
             transition: color 0.2s;
         }
         ul.project-list a:hover {
-            color: #1d4ed8;
+            color: #ffffff;
             text-decoration: underline;
         }
         .github-link {
             font-size: 1.1rem;
-            color: #23272f;
+            color: #a8b2d1;
             margin-top: 2.5rem;
         }
         .github-link a {
-            color: #2563eb;
+            color: #64ffda;
             text-decoration: none;
         }
         .github-link a:hover {
             text-decoration: underline;
+        }
+        @media screen and (max-width: 768px) {
+            main {
+                margin: 100px 0 0 0;
+                padding: 1.2rem 0.5rem 2rem 0.5rem;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            .intro {
+                font-size: 1rem;
+            }
+            ul.project-list li {
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
