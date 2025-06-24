@@ -451,3 +451,16 @@ nav ul li a:hover::after {
         right: 20px;
     }
 }
+
+/* Dark Containers */
+.dark-container {
+    background-color: transparent;
+    border-radius: 15px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.dark-container.visible {
+    background-color: #1a1a1a;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}

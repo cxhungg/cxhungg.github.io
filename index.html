@@ -22,31 +22,35 @@
     <section id="home" class="section">
         <div class="split-container">
             <div class="left-side">
-                <div class="typing-container">
-                    <h1 class="typing-text">Hi, I'm Hung</h1>
+                <div class="dark-container">
+                    <div class="typing-container">
+                        <h1 class="typing-text">Hi, I'm Hung</h1>
+                    </div>
                 </div>
             </div>
             <div class="right-side">
-                <div class="bio-content">
-                    <p>I like philosophy, physics, and cooking. </p>
-                    <p>When I'm free I work on projects that I find interesting! </p>
+                <div class="dark-container">
+                    <div class="bio-content">
+                        <p>I like philosophy, physics, and cooking. </p>
+                        <p>When I'm free I work on projects that I find interesting! </p>
 
-                    <p><br/></p>
+                        <p><br/></p>
 
-                    <button class="btn cube cube-hover" type="button">
-                    <a href="Resume_XinHung.pdf" >
-                        <div class="bg-top">
-                          <div class="bg-inner"></div>
-                        </div>
-                        <div class="bg-right">
-                          <div class="bg-inner"></div>
-                        </div>
-                        <div class="bg">
-                          <div class="bg-inner"></div>
-                        </div>
-                        <div class="text">Here's my resume</div>
-                    </a>
-                    </button>
+                        <button class="btn cube cube-hover" type="button">
+                        <a href="Resume_XinHung.pdf" >
+                            <div class="bg-top">
+                              <div class="bg-inner"></div>
+                            </div>
+                            <div class="bg-right">
+                              <div class="bg-inner"></div>
+                            </div>
+                            <div class="bg">
+                              <div class="bg-inner"></div>
+                            </div>
+                            <div class="text">Here's my resume</div>
+                        </a>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -132,12 +136,20 @@
             const startTransitionPoint = 250; // Start transitioning here
             const endTransitionPoint = 300;   // Fully transitioned here
             
+            // Get dark containers
+            const darkContainers = document.querySelectorAll('.dark-container');
+            
             // Apply smooth background color transitions based on scroll position
             if (scrollPosition >= endTransitionPoint) {
                 // Fully past the transition - stay light green
                 const lightColor = '#b6dbd0';
                 body.style.backgroundColor = lightColor;
                 html.style.backgroundColor = lightColor;
+                
+                // Show dark containers
+                darkContainers.forEach(container => {
+                    container.classList.add('visible');
+                });
             } else if (scrollPosition > startTransitionPoint) {
                 // In transition zone - interpolate between colors
                 const progress = (scrollPosition - startTransitionPoint) / (endTransitionPoint - startTransitionPoint);
@@ -153,11 +165,21 @@
                 const newColor = `rgb(${r}, ${g}, ${b})`;
                 body.style.backgroundColor = newColor;
                 html.style.backgroundColor = newColor;
+                
+                // Show dark containers during transition
+                darkContainers.forEach(container => {
+                    container.classList.add('visible');
+                });
             } else {
                 // Before transition - stay dark
                 const darkColor = '#1a1a1a';
                 body.style.backgroundColor = darkColor;
                 html.style.backgroundColor = darkColor;
+                
+                // Hide dark containers
+                darkContainers.forEach(container => {
+                    container.classList.remove('visible');
+                });
             }
         }
 
