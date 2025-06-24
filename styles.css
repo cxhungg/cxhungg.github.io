@@ -10,6 +10,7 @@ body {
     color: #ffffff;
     background-color: #1a1a1a;
     overflow-x: hidden;
+    transition: background-color 0.3s ease;
 }
 
 header {
@@ -60,11 +61,25 @@ nav ul li a:hover::after {
     width: 100%;
 }
 
+/* Section Styles */
+.section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Home Section */
+#home {
+    padding-top: 80px;
+}
+
 .split-container {
     display: flex;
-    min-height: 100vh;
-    padding-top: 80px;
-    background-color: #1a1a1a;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
 }
 
 .left-side, .right-side {
@@ -88,8 +103,7 @@ nav ul li a:hover::after {
     white-space: nowrap;
     overflow: hidden;
     animation: 
-        typing 0.9s steps(12) forwards,  /* typing speed */
-
+        typing 0.9s steps(12) forwards,
         blink .8s infinite;
 }
 
@@ -122,24 +136,164 @@ nav ul li a:hover::after {
     color: inherit;
 }
 
-/* .resume-btn {
-    display: inline-block;
-    padding: 1rem 2rem;
+/* Projects Section */
+#projects {
     background-color: transparent;
-    color: #64ffda;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    border: 2px solid #64ffda;
+    padding: 120px 1rem 2rem;
 }
 
-.resume-btn:hover {
-    background-color: rgba(100, 255, 218, 0.1);
-    transform: translateY(-2px);
-} */
+.projects-card {
+    background-color: #b6dbd0;
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 600px;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
 
-/* From Uiverse.io by gagan-gv */ 
+.projects-card h2 {
+    color: #1a1a1a;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+.projects-container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 3rem 1.5rem;
+}
+
+.projects-container h1 {
+    font-size: 2.7rem;
+    font-weight: 800;
+    margin-bottom: 1.2rem;
+    color: #ffffff;
+}
+
+.intro {
+    font-size: 1.25rem;
+    margin-bottom: 2.2rem;
+    color: #a8b2d1;
+}
+
+.project-list {
+    margin: 0 0 2.5rem 0;
+    padding-left: 1.2em;
+}
+
+.project-list li {
+    font-size: 1.15rem;
+    margin: 1.1em 0;
+    color: #ffffff;
+}
+
+.project-list a {
+    color: #64ffda;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.project-list a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.github-link {
+    font-size: 1.1rem;
+    color: #a8b2d1;
+    margin-top: 2.5rem;
+}
+
+.github-link a {
+    color: #64ffda;
+    text-decoration: none;
+}
+
+.github-link a:hover {
+    text-decoration: underline;
+}
+
+/* Bench Section */
+#bench {
+    background-color: transparent;
+    padding: 120px 1rem 2rem;
+}
+
+.bench-container {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2rem;
+}
+
+.bench-container h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+/* Back to Top Button */
+.button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(20, 20, 20);
+    border: none;
+    font-weight: 600;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 0px 4px rgba(180, 160, 255, 0.253);
+    cursor: pointer;
+    transition-duration: 0.3s;
+    overflow: hidden;
+    z-index: 1001;
+}
+
+.svgIcon {
+    width: 12px;
+    transition-duration: 0.3s;
+}
+
+.svgIcon path {
+    fill: white;
+}
+
+.button:hover {
+    width: 140px;
+    border-radius: 50px;
+    transition-duration: 0.3s;
+    background-color: rgb(181, 160, 255);
+    align-items: center;
+}
+
+.button:hover .svgIcon {
+    transform: translateY(-200%);
+}
+
+.button::before {
+    position: absolute;
+    bottom: -20px;
+    content: "Back to Top";
+    color: white;
+    font-size: 0px;
+}
+
+.button:hover::before {
+    font-size: 13px;
+    opacity: 1;
+    bottom: unset;
+    transition-duration: 0.3s;
+}
+
+/* Cube Button Styles */
 .btn {
     display: block;
     padding: 0.7em 1em;
@@ -173,7 +327,8 @@ nav ul li a:hover::after {
 }
   
 .cube .bg-top .bg-inner {
-    bottom: 0;}
+    bottom: 0;
+}
   
 .cube .bg {
     position: absolute;
@@ -241,7 +396,6 @@ nav ul li a:hover::after {
       transform: scale(0.9);
     }
 }
-  
 
 @keyframes fadeIn {
     from {
@@ -254,6 +408,7 @@ nav ul li a:hover::after {
     }
 }
 
+/* Responsive Design */
 @media screen and (max-width: 768px) {
     .split-container {
         flex-direction: column;
@@ -273,5 +428,26 @@ nav ul li a:hover::after {
 
     .left-side, .right-side {
         padding: 3rem 1.5rem;
+    }
+
+    .projects-container h1 {
+        font-size: 2rem;
+    }
+
+    .intro {
+        font-size: 1rem;
+    }
+
+    .project-list li {
+        font-size: 1rem;
+    }
+
+    .bench-container h2 {
+        font-size: 2rem;
+    }
+
+    .button {
+        bottom: 20px;
+        right: 20px;
     }
 }
