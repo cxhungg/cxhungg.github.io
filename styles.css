@@ -143,22 +143,38 @@ nav ul li a:hover::after {
 }
 
 .projects-card {
-    background-color: #bec7e7;
-    border-radius: 15px;
-    padding: 2rem;
-    margin: 2rem auto;
-    max-width: 600px;
+    background: none;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 2.5rem 0 0.5rem 0;
+    margin: 2.5rem auto 0.5rem auto;
+    max-width: 750px;
+    min-height: unset;
     text-align: center;
     position: relative;
     z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .projects-card h1 {
-    color: #1a1a1a;
-    font-size: 3.5rem;
-    font-weight: 700;
-    margin: 0;
+    color: #222;
+    font-size: 2.7rem;
+    font-weight: 800;
+    margin: 0 0 0.5rem 0;
     letter-spacing: 0.5px;
+    text-shadow: 0 2px 8px rgba(100,100,100,0.07);
+}
+
+.projects-card .projects-caption {
+    font-size: 0.9rem;
+    color: #454545;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+    text-align: center;
+    opacity: 0.85;
+    letter-spacing: 0.04em;
 }
 
 .projects-container {
@@ -449,21 +465,34 @@ nav ul li a:hover::after {
 
 /* Projects List */
 .projects-list {
-    max-width: 700px;
+    max-width: 800px;
     margin: 0 auto;
-    padding: 2rem 1.5rem 3rem 1.5rem;
+    padding: 1.5rem 0 3rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2.2rem;
 }
 
 .year-section {
-    margin-bottom: 2.5rem;
+    /* background: #d8dded; */
+    background: #ced6ed;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(30,40,90,0.08);
+    padding: 2.2rem 2rem 1.2rem 2rem;
+    margin-bottom: 0;
+    transition: box-shadow 0.2s;
+}
+.year-section:hover {
+    box-shadow: 0 8px 32px rgba(30,40,90,0.13);
 }
 
 .year-section h3 {
-    color: #1a1a1a;
-    font-size: 2rem;
+    color: #222;
+    font-size: 1.1rem;
     font-weight: 700;
-    margin-bottom: 1rem;
+    margin-bottom: 1.1rem;
     letter-spacing: 0.5px;
+    text-align: left;
 }
 
 .year-section ul {
@@ -473,30 +502,50 @@ nav ul li a:hover::after {
 }
 
 .year-section li {
-    color: #1a1a1a;
-    font-size: 1.1rem;
-    font-weight: 500;
-    margin-bottom: 0.8rem;
-    padding-left: 1rem;
+    color: #222;
+    font-size: 0.9rem;
+    font-weight: 400;
+    margin-bottom: 0.2rem;
+    padding-left: 0;
     position: relative;
-    line-height: 1.8;
-
+    line-height: 1.7;
+    background: none;
+    border: none;
+    transition: color 0.2s;
+}
+.year-section li::before {
+    content: "•";
+    color: #222;
+    font-size: 1.1em;
+    margin-right: 0.7em;
+    position: relative;
+    left: 0;
+    top: -1px;
+}
+.year-section li:hover {
+    color: #1a0dab;
+    /* text-decoration: underline; */
 }
 
-.year-section li::before {
-    content: "-";
-    position: absolute;
-    left: 0;
-    color: #1a1a1a;
-    font-weight: bold;
+@media screen and (max-width: 768px) {
+    .projects-list {
+        padding: 1rem 0 2rem 0;
+        gap: 1.2rem;
+    }
+    .year-section {
+        padding: 1.2rem 1rem 0.7rem 1rem;
+    }
+    .projects-card h1 {
+        font-size: 2rem;
+    }
 }
 
 /* Background Card */
 .background-card {
     background-color: #b6dbd0;
     border-radius: 15px;
-    padding: 3.5rem 2rem 3.5rem 2rem;
-    margin: 2.5rem auto;
+    padding: 3.5rem 2rem 2rem 2rem;
+    margin: 2.5rem auto 0.6rem auto;
     max-width: 750px;
     min-height: 260px;
     text-align: center;
@@ -517,7 +566,7 @@ nav ul li a:hover::after {
 
 .background-card .background-caption {
     font-size: 0.85rem;
-    color: #444;
+    color: #454545;
     margin-top: 2.2rem;
     margin-bottom: 0;
     text-align: center;
@@ -547,12 +596,12 @@ nav ul li a:hover::after {
 
 .background-list li {
     color: #1a1a1a;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 400;
-    margin-bottom: 1rem;
+    margin-bottom: 0.6rem;
     padding-left: 1rem;
     position: relative;
-    line-height: 1.6;
+    line-height: 1.5;
 }
 
 .background-list li::before {
@@ -561,4 +610,21 @@ nav ul li a:hover::after {
     left: 0;
     color: #1a1a1a;
     font-weight: bold;
+}
+
+.profile-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.2rem 0 0.5rem 0;
+}
+
+.profile-image {
+    width: 395px;
+    height: 395px;
+    object-fit: cover;
+    border-radius: 10%;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.18);
+    border: 1px solid #b6dbd0;
+    background: #fff;
 }
