@@ -56,13 +56,46 @@
         </div>
     </section>
 
+    <!-- Background Card -->
+    <div class="background-card">
+        <h1>Background</h1>
+    </div>
+
     <!-- Projects Card -->
     <div class="projects-card">
-        <h2>Projects</h2>
+        <h1>Projects</h1>
+    </div>
+
+    <!-- Projects List -->
+    <div class="projects-list">
+        <div class="year-section">
+            <h3>2025</h3>
+            <ul>
+                <li>Network Traffic Anomaly Detection</li>
+                <li>Market Modeling</li>
+                <li>LC-3 Virtual Machine</li>
+            </ul>
+        </div>
+        
+        <div class="year-section">
+            <h3>2024</h3>
+            <ul>
+                <li>Physics Engine</li>
+                <li>Platformer Game</li>
+            </ul>
+        </div>
+        
+        <div class="year-section">
+            <h3>2023</h3>
+            <ul>
+                <li>RetroSPI</li>
+                <li>Dungeon Game</li>
+            </ul>
+        </div>
     </div>
 
     <!-- Projects Section -->
-    <section id="projects" class="section">
+    <!-- <section id="projects" class="section">
         <div class="projects-container">
             <h1>Projects</h1>
             <div class="intro">
@@ -77,7 +110,7 @@
                 You can also find smaller projects and experiments at my <a href="https://github.com/cxhungg" target="_blank">GitHub page</a>.
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Bench Section -->
     <section id="bench" class="section">
@@ -132,16 +165,18 @@
             const body = document.body;
             const html = document.documentElement;
             
-            // Define trigger points for smooth transition
-            const startTransitionPoint = 250; // Start transitioning here
-            const endTransitionPoint = 300;   // Fully transitioned here
+            // Define trigger points for smooth transitions
+            const backgroundStartPoint = 100; // Start transitioning to yellow here
+            const backgroundEndPoint = 150;   // Fully yellow here
+            const projectsStartPoint = 300;   // Start transitioning to green here
+            const projectsEndPoint = 350;     // Fully green here
             
             // Get dark containers
             const darkContainers = document.querySelectorAll('.dark-container');
             
             // Apply smooth background color transitions based on scroll position
-            if (scrollPosition >= endTransitionPoint) {
-                // Fully past the transition - stay light green
+            if (scrollPosition >= projectsEndPoint) {
+                // Fully past the projects transition - stay light green
                 const lightColor = '#b6dbd0';
                 body.style.backgroundColor = lightColor;
                 html.style.backgroundColor = lightColor;
@@ -150,12 +185,12 @@
                 darkContainers.forEach(container => {
                     container.classList.add('visible');
                 });
-            } else if (scrollPosition > startTransitionPoint) {
-                // In transition zone - interpolate between colors
-                const progress = (scrollPosition - startTransitionPoint) / (endTransitionPoint - startTransitionPoint);
+            } else if (scrollPosition > projectsStartPoint) {
+                // In projects transition zone - interpolate between yellow and green
+                const progress = (scrollPosition - projectsStartPoint) / (projectsEndPoint - projectsStartPoint);
                 
-                // Interpolate between #1a1a1a and #b6dbd0
-                const startColor = [26, 26, 26]; // #1a1a1a
+                // Interpolate between #fbe274 and #b6dbd0
+                const startColor = [251, 226, 116]; // #fbe274
                 const endColor = [182, 219, 208]; // #b6dbd0
                 
                 const r = Math.round(startColor[0] + (endColor[0] - startColor[0]) * progress);
@@ -170,8 +205,38 @@
                 darkContainers.forEach(container => {
                     container.classList.add('visible');
                 });
+            } else if (scrollPosition >= backgroundEndPoint) {
+                // Fully past the background transition - stay yellow
+                const yellowColor = '#fbe274';
+                body.style.backgroundColor = yellowColor;
+                html.style.backgroundColor = yellowColor;
+                
+                // Show dark containers
+                darkContainers.forEach(container => {
+                    container.classList.add('visible');
+                });
+            } else if (scrollPosition > backgroundStartPoint) {
+                // In background transition zone - interpolate between dark and yellow
+                const progress = (scrollPosition - backgroundStartPoint) / (backgroundEndPoint - backgroundStartPoint);
+                
+                // Interpolate between #1a1a1a and #fbe274
+                const startColor = [26, 26, 26]; // #1a1a1a
+                const endColor = [251, 226, 116]; // #fbe274
+                
+                const r = Math.round(startColor[0] + (endColor[0] - startColor[0]) * progress);
+                const g = Math.round(startColor[1] + (endColor[1] - startColor[1]) * progress);
+                const b = Math.round(startColor[2] + (endColor[2] - startColor[2]) * progress);
+                
+                const newColor = `rgb(${r}, ${g}, ${b})`;
+                body.style.backgroundColor = newColor;
+                html.style.backgroundColor = newColor;
+                
+                // Show dark containers during transition
+                darkContainers.forEach(container => {
+                    container.classList.add('visible');
+                });
             } else {
-                // Before transition - stay dark
+                // Before any transition - stay dark
                 const darkColor = '#1a1a1a';
                 body.style.backgroundColor = darkColor;
                 html.style.backgroundColor = darkColor;

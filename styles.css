@@ -153,9 +153,9 @@ nav ul li a:hover::after {
     z-index: 10;
 }
 
-.projects-card h2 {
+.projects-card h1 {
     color: #1a1a1a;
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     font-weight: 700;
     margin: 0;
     letter-spacing: 0.5px;
@@ -463,4 +463,68 @@ nav ul li a:hover::after {
 .dark-container.visible {
     background-color: #1a1a1a;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Projects List */
+.projects-list {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 3rem 1.5rem;
+}
+
+.year-section {
+    margin-bottom: 2.5rem;
+}
+
+.year-section h3 {
+    color: #1a1a1a;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    letter-spacing: 0.5px;
+}
+
+.year-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.year-section li {
+    color: #1a1a1a;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 0.8rem;
+    padding-left: 1rem;
+    position: relative;
+    line-height: 1.8;
+
+}
+
+.year-section li::before {
+    content: "-";
+    position: absolute;
+    left: 0;
+    color: #1a1a1a;
+    font-weight: bold;
+}
+
+/* Background Card */
+.background-card {
+    background-color: #fbe274;
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 600px;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+.background-card h1 {
+    color: #1a1a1a;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 0.5px;
 }
