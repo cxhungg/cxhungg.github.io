@@ -61,6 +61,16 @@
         <h1>Background</h1>
     </div>
 
+    <!-- Background Information Section -->
+    <div class="background-info">
+        <p class="intro-text">Here is a little about my background and interests:</p>
+        <ul class="background-list">
+            <li>I am a Computer Engineering student at University of Massachusetts Amherst</li>
+            <li>My area of interests includes Cryptography, Machine Learning, and FPGAs.</li>
+            <li>Sometimes I'm good at basketball</li>
+        </ul>
+    </div>
+
     <!-- Projects Card -->
     <div class="projects-card">
         <h1>Projects</h1>
@@ -166,32 +176,32 @@
             const html = document.documentElement;
             
             // Define trigger points for smooth transitions
-            const backgroundStartPoint = 100; // Start transitioning to yellow here
-            const backgroundEndPoint = 150;   // Fully yellow here
-            const projectsStartPoint = 300;   // Start transitioning to green here
-            const projectsEndPoint = 350;     // Fully green here
+            const backgroundStartPoint = 150; // Start transitioning to light green here
+            const backgroundEndPoint = 200;   // Fully light green here
+            const projectsStartPoint = 660;   // Start transitioning to blue here
+            const projectsEndPoint = 710;     // Fully blue here
             
             // Get dark containers
             const darkContainers = document.querySelectorAll('.dark-container');
             
             // Apply smooth background color transitions based on scroll position
             if (scrollPosition >= projectsEndPoint) {
-                // Fully past the projects transition - stay light green
-                const lightColor = '#b6dbd0';
-                body.style.backgroundColor = lightColor;
-                html.style.backgroundColor = lightColor;
+                // Fully past the projects transition - stay blue
+                const blueColor = '#bec7e7';
+                body.style.backgroundColor = blueColor;
+                html.style.backgroundColor = blueColor;
                 
                 // Show dark containers
                 darkContainers.forEach(container => {
                     container.classList.add('visible');
                 });
             } else if (scrollPosition > projectsStartPoint) {
-                // In projects transition zone - interpolate between yellow and green
+                // In projects transition zone - interpolate between light green and blue
                 const progress = (scrollPosition - projectsStartPoint) / (projectsEndPoint - projectsStartPoint);
                 
-                // Interpolate between #fbe274 and #b6dbd0
-                const startColor = [251, 226, 116]; // #fbe274
-                const endColor = [182, 219, 208]; // #b6dbd0
+                // Interpolate between #b6dbd0 and #bec7e7
+                const startColor = [182, 219, 208]; // #b6dbd0
+                const endColor = [190, 199, 231]; // #bec7e7
                 
                 const r = Math.round(startColor[0] + (endColor[0] - startColor[0]) * progress);
                 const g = Math.round(startColor[1] + (endColor[1] - startColor[1]) * progress);
@@ -206,22 +216,22 @@
                     container.classList.add('visible');
                 });
             } else if (scrollPosition >= backgroundEndPoint) {
-                // Fully past the background transition - stay yellow
-                const yellowColor = '#fbe274';
-                body.style.backgroundColor = yellowColor;
-                html.style.backgroundColor = yellowColor;
+                // Fully past the background transition - stay light green
+                const lightGreenColor = '#b6dbd0';
+                body.style.backgroundColor = lightGreenColor;
+                html.style.backgroundColor = lightGreenColor;
                 
                 // Show dark containers
                 darkContainers.forEach(container => {
                     container.classList.add('visible');
                 });
             } else if (scrollPosition > backgroundStartPoint) {
-                // In background transition zone - interpolate between dark and yellow
+                // In background transition zone - interpolate between dark and light green
                 const progress = (scrollPosition - backgroundStartPoint) / (backgroundEndPoint - backgroundStartPoint);
                 
-                // Interpolate between #1a1a1a and #fbe274
+                // Interpolate between #1a1a1a and #b6dbd0
                 const startColor = [26, 26, 26]; // #1a1a1a
-                const endColor = [251, 226, 116]; // #fbe274
+                const endColor = [182, 219, 208]; // #b6dbd0
                 
                 const r = Math.round(startColor[0] + (endColor[0] - startColor[0]) * progress);
                 const g = Math.round(startColor[1] + (endColor[1] - startColor[1]) * progress);

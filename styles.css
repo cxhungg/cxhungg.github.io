@@ -143,7 +143,7 @@ nav ul li a:hover::after {
 }
 
 .projects-card {
-    background-color: #b6dbd0;
+    background-color: #bec7e7;
     border-radius: 15px;
     padding: 2rem;
     margin: 2rem auto;
@@ -511,7 +511,7 @@ nav ul li a:hover::after {
 
 /* Background Card */
 .background-card {
-    background-color: #fbe274;
+    background-color: #b6dbd0;
     border-radius: 15px;
     padding: 2rem;
     margin: 2rem auto;
@@ -527,4 +527,43 @@ nav ul li a:hover::after {
     font-weight: 700;
     margin: 0;
     letter-spacing: 0.5px;
+}
+
+/* Background Information Section */
+.background-info {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 3rem 1.5rem;
+}
+
+.intro-text {
+    color: #1a1a1a;
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.background-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.background-list li {
+    color: #1a1a1a;
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+    position: relative;
+    line-height: 1.6;
+}
+
+.background-list li::before {
+    content: "-";
+    position: absolute;
+    left: 0;
+    color: #1a1a1a;
+    font-weight: bold;
 }
