@@ -495,20 +495,33 @@ nav ul li a:hover::after {
 .background-card {
     background-color: #b6dbd0;
     border-radius: 15px;
-    padding: 2rem;
-    margin: 2rem auto;
-    max-width: 600px;
+    padding: 3.5rem 2rem 3.5rem 2rem;
+    margin: 2.5rem auto;
+    max-width: 750px;
+    min-height: 260px;
     text-align: center;
     position: relative;
     z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .background-card h1 {
     color: #1a1a1a;
-    font-size: 3.5rem;
+    font-size: 3.8rem;
     font-weight: 700;
     margin: 0;
     letter-spacing: 0.5px;
+}
+
+.background-card .background-caption {
+    font-size: 0.85rem;
+    color: #444;
+    margin-top: 2.2rem;
+    margin-bottom: 0;
+    text-align: center;
+    opacity: 0.85;
 }
 
 /* Background Information Section */
