@@ -628,3 +628,57 @@ nav ul li a:hover::after {
     border: 1px solid #b6dbd0;
     background: #fff;
 }
+
+.social-icons-container {
+    position: fixed;
+    bottom: 28px;
+    left: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    z-index: 1200;
+}
+
+.Btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    background: #222;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5em 1em;
+    font-size: 1rem;
+    font-family: inherit;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(30,40,90,0.10);
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+.Btn:hover {
+    background: #454545;
+    color: #64ffda;
+}
+
+.Btn .svgIcon {
+    margin-right: 0.4em;
+    fill: currentColor;
+}
+
+.Btn .text {
+    font-size: 0.98em;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+}
+
+@media screen and (max-width: 768px) {
+    .social-icons-container {
+        bottom: 14px;
+        left: 14px;
+        gap: 0.4rem;
+    }
+    .Btn {
+        font-size: 0.92rem;
+        padding: 0.4em 0.7em;
+    }
+}
