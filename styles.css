@@ -629,6 +629,7 @@ nav ul li a:hover::after {
     background: #fff;
 }
 
+/* Social Buttons - Custom Styles */
 .social-icons-container {
     position: fixed;
     bottom: 28px;
@@ -639,36 +640,63 @@ nav ul li a:hover::after {
     z-index: 1200;
 }
 
-.Btn {
+/* Base Button Style for Social Buttons Only */
+.social-icons-container .Btn {
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
     display: flex;
     align-items: center;
-    gap: 0.5em;
-    background: #222;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    padding: 0.5em 1em;
-    font-size: 1rem;
-    font-family: inherit;
+    justify-content: center;
+    transition-duration: .4s;
     cursor: pointer;
-    box-shadow: 0 2px 8px rgba(30,40,90,0.10);
-    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    position: relative;
+    overflow: hidden;
+    background-color: rgb(31, 31, 31);
 }
 
-.Btn:hover {
-    background: #454545;
-    color: #64ffda;
+.social-icons-container .github-btn {
+    background-color: rgb(31, 31, 31);
+}
+.social-icons-container .email-btn {
+    background-color: rgb(31, 31, 31);
+}
+.social-icons-container .linkedin-btn {
+    background: rgb(31, 31, 31);
 }
 
-.Btn .svgIcon {
-    margin-right: 0.4em;
-    fill: currentColor;
+.social-icons-container .svgIcon {
+    transition-duration: .3s;
 }
 
-.Btn .text {
-    font-size: 0.98em;
-    font-weight: 500;
-    letter-spacing: 0.01em;
+.social-icons-container .svgIcon path {
+    fill: white;
+}
+
+.social-icons-container .text {
+    position: absolute;
+    color: rgb(255, 255, 255);
+    width: 120px;
+    font-weight: 600;
+    opacity: 0;
+    transition-duration: .4s;
+}
+
+.social-icons-container .Btn:hover {
+    width: 110px;
+    transition-duration: .4s;
+    border-radius: 30px;
+}
+
+.social-icons-container .Btn:hover .text {
+    opacity: 1;
+    transition-duration: .4s;
+}
+
+.social-icons-container .Btn:hover .svgIcon {
+    opacity: 0;
+    transition-duration: .3s;
 }
 
 @media screen and (max-width: 768px) {
@@ -676,9 +704,5 @@ nav ul li a:hover::after {
         bottom: 14px;
         left: 14px;
         gap: 0.4rem;
-    }
-    .Btn {
-        font-size: 0.92rem;
-        padding: 0.4em 0.7em;
     }
 }
