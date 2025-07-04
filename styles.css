@@ -544,7 +544,7 @@ nav ul li a:hover::after {
 .background-card {
     background-color: #b6dbd0;
     border-radius: 15px;
-    padding: 3.5rem 2rem 2rem 2rem;
+    padding: 2.2rem 2rem 2.8rem 2rem;
     margin: 2.5rem auto 0.6rem auto;
     max-width: 750px;
     min-height: 260px;
@@ -553,15 +553,16 @@ nav ul li a:hover::after {
     z-index: 10;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
 }
 
 .background-card h1 {
     color: #1a1a1a;
-    font-size: 3.8rem;
+    font-size: 3.2rem;
     font-weight: 700;
-    margin: 0;
-    letter-spacing: 0.5px;
+    margin: 0 auto;
+    align-self: center;
 }
 
 .background-card .background-caption {
@@ -570,7 +571,10 @@ nav ul li a:hover::after {
     margin-top: 2.2rem;
     margin-bottom: 0;
     text-align: center;
-    opacity: 0.85;
+    position: absolute;
+    bottom: 2.3rem;
+    left: 0;
+    width: 100%;
 }
 
 /* Background Information Section */
@@ -616,7 +620,7 @@ nav ul li a:hover::after {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0.2rem 0 0.5rem 0;
+    margin: 0 0 0.5rem 0;
 }
 
 .profile-image {
