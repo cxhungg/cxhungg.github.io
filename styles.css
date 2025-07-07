@@ -26,7 +26,83 @@ header {
     top: 0;
     z-index: 1000;
     padding: 1.5rem 0;
+    transition: all 0.5s ease;
+    overflow: hidden;
 }
+
+/* Ocean Elements Container */
+.ocean-elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+header.ocean-theme .ocean-elements {
+    opacity: 1;
+}
+
+/* Fishes */
+.fish {
+    position: absolute;
+    width: 20px;
+    height: 12px;
+    background: linear-gradient(45deg, #ffd700, #ffed4e);
+    border-radius: 50%;
+    animation: fishSwim 8s linear infinite;
+}
+
+.fish::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    right: -3px;
+    width: 8px;
+    height: 8px;
+    background: #ffd700;
+    border-radius: 50% 0 50% 50%;
+    transform: rotate(45deg);
+}
+
+.fish::after {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 3px;
+    width: 3px;
+    height: 3px;
+    background: #000;
+    border-radius: 50%;
+}
+
+.fish-1 {
+    top: 20%;
+    animation-delay: 0s;
+}
+
+.fish-2 {
+    top: 40%;
+    animation-delay: 2s;
+}
+
+.fish-3 {
+    top: 60%;
+    animation-delay: 4s;
+}
+
+@keyframes fishSwim {
+    0% { left: calc(100% + 30px); transform: translateY(0px) rotate(0deg); }
+    25% { transform: translateY(-10px) rotate(-5deg); }
+    50% { left: 50%; transform: translateY(0px) rotate(0deg); }
+    75% { transform: translateY(10px) rotate(5deg); }
+    100% { left: -30px; transform: translateY(0px) rotate(0deg); }
+}
+
+
 
 nav ul {
     display: flex;
@@ -44,6 +120,7 @@ nav ul li a {
     text-transform: uppercase;
     transition: all 0.3s ease;
     position: relative;
+    z-index: 10;
 }
 
 nav ul li a::after {
@@ -452,6 +529,11 @@ nav ul li a:hover::after {
         bottom: 20px;
         right: 20px;
     }
+    
+    /* Reduce ocean elements on mobile for better performance */
+    .fish {
+        display: none;
+    }
 }
 
 /* Dark Containers */
@@ -546,50 +628,49 @@ nav ul li a:hover::after {
 
 /* Background Card */
 .background-card {
-    background-color: #b6dbd0;
-    border-radius: 15px;
-    padding: 2.2rem 2rem 2.8rem 2rem;
-    margin: 2.5rem auto 0.6rem auto;
+    background: none;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 2.5rem 0 3rem 0;
+    margin: 2.5rem auto 0.5rem auto;
     max-width: 750px;
-    min-height: 260px;
+    min-height: unset;
     text-align: center;
     position: relative;
     z-index: 10;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .background-card h1 {
-    color: #1a1a1a;
-    font-size: 3.2rem;
-    font-weight: 700;
-    margin: 0 auto;
-    align-self: center;
+    color: #222;
+    font-size: 2.7rem;
+    font-weight: 800;
+    margin: 0 0 0.5rem 0;
+    letter-spacing: 0.5px;
+    text-shadow: 0 2px 8px rgba(100,100,100,0.07);
 }
 
 .background-card .background-caption {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     color: #454545;
-    margin-top: 2.2rem;
+    margin-top: 0.5rem;
     margin-bottom: 0;
     text-align: center;
-    position: absolute;
-    bottom: 2.3rem;
-    left: 0;
-    width: 100%;
+    opacity: 0.85;
+    letter-spacing: 0.04em;
 }
 
 /* Background Information Section */
 .background-info {
     max-width: 700px;
     margin: 0 auto;
-    padding: 2rem 1.5rem 3rem 1.5rem;
+    padding: 2rem 1.5rem 1rem 1.5rem;
 }
 
 .intro-text {
-    color: #1a1a1a;
+    color: #222;
     font-size: 1.3rem;
     font-weight: 500;
     margin-bottom: 1.5rem;
@@ -603,7 +684,7 @@ nav ul li a:hover::after {
 }
 
 .background-list li {
-    color: #1a1a1a;
+    color: #222;
     font-size: 1rem;
     font-weight: 400;
     margin-bottom: 0.6rem;
@@ -616,7 +697,7 @@ nav ul li a:hover::after {
     content: "-";
     position: absolute;
     left: 0;
-    color: #1a1a1a;
+    color: #222;
     font-weight: bold;
 }
 
@@ -633,7 +714,7 @@ nav ul li a:hover::after {
     object-fit: cover;
     border-radius: 10%;
     box-shadow: 0 4px 18px rgba(0,0,0,0.18);
-    border: 1px solid #b6dbd0;
+    border: 1px solid #ced6ed;
     background: #fff;
 }
 
