@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width">
+<title>Network Traffic Anomaly Detection</title>
+<link rel="stylesheet" href="network_styles.css">
+</head>
+<body style="isolation: isolate;">
+<p>
+<a href="index.html">Home</a>
+<a style="margin-left: 16px" href="https://github.com/cxhungg/network_anomaly_detection">GitHub</a>
+<a style="margin-left: 16px" href="Network_Anomaly_Detection.pdf">Project Report</a>
+</p>
+
+<h1>Network Traffic Anomaly Detection</h1>
+<p><strong>07/09/2025</strong></p>
+
+
+<p>I did this project to compare the effectiveness of anomaly detection in network traffic between supervised and unsupervised learning. The dataset used is CICIDS2017, a dataset from the Canadian Institute for Cybersecurity.</p>
+<p><strong>Supervised Learning vs. Unsupervised Learning</strong></p>
+
+<p>For supervised learning, I decided to use Random Forest because it can handle non-linear 
+    relationships and is relatively easy to implement. XGBoost is another supervised learning model 
+    that uses decision trees but in a different way, and is apparently slightly better than Random Forest.
+     XGBoost requires more hyperparameter tuning, but I didn't do that in this project because it took too long
+     to run when I tried.
+</p>
+<p>
+    For unsupervised learning, I decided to use Isolation Forest because it is made for anomaly detection. Instead of learning a profile of normal data,
+     it tries to isolate anomalies. I used Autoencoder because I learned about it in one of my recent classes and I
+    wanted to try it out.
+</p>
+
+<p><strong>Summary</strong></p>
+<ul>
+<li>Developed and compared <strong>supervised </strong>(Random Forest, XGBoost) and <strong>unsupervised </strong>(Isolation Forest, Autoencoder) models to detect anomalies in network traffic using the CICIDS2017 dataset.</li>
+<li>Achieved <strong>96.69% AUC</strong> with XGBoost and <strong>87.14% AUC</strong> with Autoencoder by engineering flow-based network features and performing time-series traffic analysis.</li>
+<li>Visualized model performance using <strong>ROC curves, confusion matrices, and t-SNE clustering.</strong></li>
+</ul>
+
+<p><em>Used: Python, Scikit-learn, XGBoost, TensorFlow, Pandas, NumPy, Matplotlib, Seaborn</em></p>
+
+</body>
+</html> 
