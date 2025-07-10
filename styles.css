@@ -795,3 +795,20 @@ nav ul li a:hover::after {
         gap: 0.4rem;
     }
 }
+
+.project-links a {
+    text-decoration: none;
+}
+
+.project-links a:link, .project-links .block-link a:visited {
+    color: #0046b3;
+}
+
+.project-links a:hover, .project-links a:active {
+    text-decoration: underline;
+    color: #4d92ff;
+}
+
+.project-links a:visited {
+    color: #662e99;
+}

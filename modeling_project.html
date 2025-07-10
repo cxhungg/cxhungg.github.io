@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width">
+<title>Modeling Project</title>
+<link rel="stylesheet" href="network_styles.css">
+</head>
+<body style="isolation: isolate;">
+<p>
+<a href="index.html">Home</a>
+<a style="margin-left: 16px" href="Modelling_Project_Report.pdf">Project Report</a>
+</p>
+
+<h1>Mathematical Model of Market Dynamics</h1>
+<p><strong>12/10/2024</strong></p>
+<p>I did this project as part of my mathematical modeling class (Math 456) to study the dynamics between cryptocurrency markets and traditional financial markets.
+    I used the S&amp;P 500 as a general indicator of traditional markets and constructed a cryptocurrency index from the top 23 cryptocurrencies.
+    I also created an additional data series to represent capital not in either market but able to flow in or out.
+</p>
+<p><strong>Markov Chain Model</strong></p>
+<p>
+Let A represent the S&amp;P 500, B the Cryptocurrency Market, and C all external markets and capital. The Markov chain transition matrix P, representing the probabilities of transitioning between the three markets, is defined as:
+</p>
+<pre><code>P = [ P_AA  P_AB  P_AC ]
+    [ P_BA  P_BB  P_BC ]
+    [ P_CA  P_CB  P_CC ]
+</code></pre>
+<p>
+Each row represents the probabilities of transitioning from one market to another, 
+with rows summing to 1. The goal is to estimate P such that PX = Y, where X and Y are 
+vectors of market states at consecutive time steps. To solve for P, the dataset was 
+interpolated to increase the number of data points, allowing for a least-squares 
+estimation of P under constraints 0 &lt; P_ij &lt; 1.
+</p>
+<p>
+The resulting transition matrices were analyzed and visualized, 
+but the complexity of capital flow was difficult to capture with a 
+simple probability transition matrix.
+</p>
+
+<p><strong>Modified Lotka-Volterra Model</strong></p>
+<p>
+The Lotka-Volterra model describes predator-prey dynamics and 
+was adapted to model the interaction between traditional and cryptocurrency markets. 
+The traditional model equations are:
+</p>
+<pre><code>dA/dt = αA - βAB
+dB/dt = δAB - γB
+</code></pre>
+<p>
+where A and B are the market indices, and α, β, δ, γ are parameters. 
+To account for external effects, a new parameter k was introduced:
+</p>
+<pre><code>dA/dt = αA - βAB + k(2 - (A + B))
+dB/dt = δAB - γB - k(2 - (A + B))
+</code></pre>
+<p>
+The model parameters were fitted to observed data by minimizing 
+the sum of squared errors. Both the traditional and modified models 
+were compared across different date ranges. The modified model often 
+provided a better fit, especially over longer time horizons, due to its 
+flexibility in accounting for external influences.
+</p>
+
+<p><strong>Summary</strong></p>
+<ul>
+<li>Formulated mathematical models (Markov Chains, Lotka-Volterra) to study interactions between cryptocurrency 
+    markets and traditional financial markets. </li>
+<li>Proposed a Modified Lotka-Volterra model, achieving a 99.9% reduction in Mean Squared Error over a traditional 
+    Lotka-Volterra model. </li>
+<li>Utilized machine learning and optimization techniques for parameter fitting and validation of 
+    dynamic models. </li>
+</ul>
+
+<p><em>Used: Python, SciPy, NumPy, Matplotlib, Pandas</em></p>
+
+</body>
+</html> 
