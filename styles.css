@@ -30,80 +30,6 @@ header {
     overflow: hidden;
 }
 
-/* Ocean Elements Container */
-.ocean-elements {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.8s ease;
-}
-
-header.ocean-theme .ocean-elements {
-    opacity: 1;
-}
-
-/* Fishes */
-.fish {
-    position: absolute;
-    width: 20px;
-    height: 12px;
-    background: linear-gradient(45deg, #ffd700, #ffed4e);
-    border-radius: 50%;
-    animation: fishSwim 8s linear infinite;
-}
-
-.fish::before {
-    content: '';
-    position: absolute;
-    top: 2px;
-    right: -3px;
-    width: 8px;
-    height: 8px;
-    background: #ffd700;
-    border-radius: 50% 0 50% 50%;
-    transform: rotate(45deg);
-}
-
-.fish::after {
-    content: '';
-    position: absolute;
-    top: 4px;
-    left: 3px;
-    width: 3px;
-    height: 3px;
-    background: #000;
-    border-radius: 50%;
-}
-
-.fish-1 {
-    top: 20%;
-    animation-delay: 0s;
-}
-
-.fish-2 {
-    top: 40%;
-    animation-delay: 2s;
-}
-
-.fish-3 {
-    top: 60%;
-    animation-delay: 4s;
-}
-
-@keyframes fishSwim {
-    0% { left: calc(100% + 30px); transform: translateY(0px) rotate(0deg); }
-    25% { transform: translateY(-10px) rotate(-5deg); }
-    50% { left: 50%; transform: translateY(0px) rotate(0deg); }
-    75% { transform: translateY(10px) rotate(5deg); }
-    100% { left: -30px; transform: translateY(0px) rotate(0deg); }
-}
-
-
-
 nav ul {
     display: flex;
     justify-content: center;
@@ -530,10 +456,6 @@ nav ul li a:hover::after {
         right: 20px;
     }
     
-    /* Reduce ocean elements on mobile for better performance */
-    .fish {
-        display: none;
-    }
 }
 
 /* Dark Containers */
